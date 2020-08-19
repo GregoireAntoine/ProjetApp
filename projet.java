@@ -129,12 +129,12 @@ public class projet
         ok8.setBounds(350,300,100,40);
         JButton ok9 = new JButton("d'accord");
         ok9.setBounds(350,300,100,40);
-        JButton okdem = new JButton("démarrer");
+        JButton okdem = new JButton("dÃ©marrer");
         okdem.setBounds(350,300,100,40);
         JButton ok50 = new JButton("d'accord");
         ok50.setBounds(350,250,160,40);
-        //phrase de démarrage
-        JLabel demarrage = new JLabel("bienvenue, cliquez pour commencer le test de culture général.");
+        //phrase de dÃ©marrage
+        JLabel demarrage = new JLabel("bienvenue, cliquez pour commencer le test de culture gÃ©nÃ©ral.");
         demarrage.setBounds(210,100,600,70);
         fen.getContentPane().add(demarrage);
         fen.getContentPane().add(okdem);
@@ -143,25 +143,25 @@ public class projet
         String tab[][]=
         {
             
-            {"  1) Le sang compte pour environ 2% du poids du corps humain","faux le sang représente 6 à 7 % du corps humain et non pas seulement 2% ","F","f"},
+            {"  1) Le sang compte pour environ 2% du poids du corps humain","faux le sang reprÃ©sente 6 Ã  7 % du corps humain et non pas seulement 2% ","F","f"},
             
-            {"2) Les fossiles ont contribué à renforcer la croyance dans la théorie de l’évolution","Vrai ceux ci on grandement aider dans notre comprhension de l'évolution","V","v"},
+            {"2) Les fossiles ont contribuÃ© Ã  renforcer la croyance dans la thÃ©orie de lâ€™Ã©volution","Vrai ceux ci on grandement aider dans notre comprhension de l'Ã©volution","V","v"},
             
-            {"3) Le grand-père de Charles Darwin a aidé à jeter les bases de la théorie de l’évolution","C'est vrai c'est son grand père paternel qui l'aurait mit sur cette voie","V","v"},
+            {"3) Le grand-pÃ¨re de Charles Darwin a aidÃ© Ã  jeter les bases de la thÃ©orie de lâ€™Ã©volution","C'est vrai c'est son grand pÃ¨re paternel qui l'aurait mit sur cette voie","V","v"},
             
-            {"4) Les baleines ont toujours été des mammifères marins","Faux, il y a 50 millions d'années c'était des amphibiens tels une grenouille","F","f"},
+            {"4) Les baleines ont toujours Ã©tÃ© des mammifÃ¨res marins","Faux, il y a 50 millions d'annÃ©es c'Ã©tait des amphibiens tels une grenouille","F","f"},
             
-            {"5) La bibliothèque d’Alexandrie, en Égypte, a été fondée par les Grecs.","Vrai,Pitolémée décida de faire d’Alexandrie la capitale culturelle du monde hellénistique","V","v"},
+            {"5) La bibliothÃ¨que dâ€™Alexandrie, en Ã‰gypte, a Ã©tÃ© fondÃ©e par les Grecs.","Vrai,PitolÃ©mÃ©e dÃ©cida de faire dâ€™Alexandrie la capitale culturelle du monde hellÃ©nistique","V","v"},
             
-            {"6) La phrase « heureusement, mon téléviseur était encore sur la garantie » est juste","faux il faut dire est sous garantie car ça correspondt a une faute de français","F","f"},
+            {"6) La phrase Â« heureusement, mon tÃ©lÃ©viseur Ã©tait encore sur la garantie Â» est juste","faux il faut dire est sous garantie car Ã§a correspondt a une faute de franÃ§ais","F","f"},
             
-            {"7) il est correct de dire : le petit caniche de mon voisin aboie sans arrêt","faux il faut dire jappe, aboyer c'est pour les grands chiens tel les ","F","f"},
+            {"7) il est correct de dire : le petit caniche de mon voisin aboie sans arrÃªt","faux il faut dire jappe, aboyer c'est pour les grands chiens tel les ","F","f"},
             
-            {"8) L’estampie est une gravure médiévale, ancêtre du timbre","faux, c'est une mode danse en virvoltant apparue au 13ème siècle","F","f"},
+            {"8) Lâ€™estampie est une gravure mÃ©diÃ©vale, ancÃªtre du timbre","faux, c'est une mode danse en virvoltant apparue au 13Ã¨me siÃ¨cle","F","f"},
             
-            {"9) Liechtenstein est la capitale du Liechtenstein","faux sa capital est Vaduz même si beaucoup de gens font la faute.","F","f"},
+            {"9) Liechtenstein est la capitale du Liechtenstein","faux sa capital est Vaduz mÃªme si beaucoup de gens font la faute.","F","f"},
             
-            {"10) Le port de Marseille a été fondé par les Grecs vers 600 av. J.-C.","Vrai elle à été fondée par les Grecs d'ailleurs marseille vient de Massalia ","V","v"}
+            {"10) Le port de Marseille a Ã©tÃ© fondÃ© par les Grecs vers 600 av. J.-C.","Vrai elle Ã  Ã©tÃ© fondÃ©e par les Grecs d'ailleurs marseille vient de Massalia ","V","v"}
         };
         // enregistrement des reponse dans les JLabels
         JLabel rep1 = new JLabel(tab[0][1]);
@@ -218,7 +218,7 @@ public class projet
             char s= tab[i][2].charAt(0);
             char j = myObj.next().charAt(0) ; // Read user input
             System.out.print(j);
-            char v ='v';
+              if(j=='v'||j=='V'||j=='f'||j=='F') {
             if(t==j || s==j)
             
             {
@@ -235,10 +235,13 @@ public class projet
                 System.out.print("'"+ tab[i][1]+"'");
                 System.out.print("\n");
                 System.out.print("\n");
+            }}else {
+            	i--;
+            	System.out.printf("saisie incorrect !!");
             }
             if(i==9)
             {
-                System.out.print("tu as terminer avec "+score+" bonnes réponses ");
+                System.out.print("tu as terminer avec "+score+" bonnes rÃ©ponses ");
             }
         }
         //fin partie console
@@ -287,7 +290,7 @@ public class projet
         JLABELFINAL.setText("VOUS AVEZ TERMINER LE QUIZ BRAVO");
         JLABELFINAL.setBounds(270,200,600,10);
         fen.setVisible(true);
-        // bouton démarrage
+        // bouton dÃ©marrage
         okdem.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
